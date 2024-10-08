@@ -23,8 +23,15 @@
     <div id="app">
         <div class="container">
             <div class="row">
-                <div class="col">
-
+                <div class="col d-flex">
+                    <div class="card" style="width: 18rem;" v-for="(item, index) in list" :key="index">
+                        <img class="card-img-top" :src="item.poster" alt="Card image cap">
+                        <div class="card-body text-center">
+                            <h5>{{item.title}}</h5>
+                            <p class="card-text">{{item.author}}</p>
+                            <p>{{item.year}}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
