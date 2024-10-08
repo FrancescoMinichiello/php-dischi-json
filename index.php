@@ -20,14 +20,21 @@
 </head>
 
 <body>
+    <header class="py-3">
+        <div class="container">
+            <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png"
+                alt="Spotify" class="logo">
+        </div>
+    </header>
     <div id="app">
         <div class="container">
-            <div class="row">
-                <div class="col d-flex">
-                    <div class="card" style="width: 18rem;" v-for="(item, index) in list" :key="index">
-                        <img class="card-img-top" :src="item.poster" alt="Card image cap">
+            <div class="row justify-content-center mt-3">
+                <div class="col-10 d-flex flex-wrap gap-5 justify-content-center">
+                    <div class="card card-item text-white" style="width: 18rem;" v-for="(item, index) in list"
+                        :key="index">
+                        <img class="card-img-top px-5 py-3" :src="item.poster" alt="Card image cap">
                         <div class="card-body text-center">
-                            <h5>{{item.title}}</h5>
+                            <h5 class="fw-semibold">{{item.title}}</h5>
                             <p class="card-text">{{item.author}}</p>
                             <p>{{item.year}}</p>
                         </div>
