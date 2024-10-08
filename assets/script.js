@@ -8,7 +8,7 @@ createApp({
     },
     methods: {
         getListItem() {
-            axios.get('http://localhost/php-dischi-json/api.php')
+            axios.get('http://localhost/php-dischi-json/api/')
                 .then((response) => {
                     console.log(response);
                     this.list = response.data;
